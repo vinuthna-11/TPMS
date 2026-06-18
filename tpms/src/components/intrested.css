@@ -1,0 +1,38 @@
+.interested-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+}
+.interested-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.interested-container h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.post-interest-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+.post-interest-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+.user-list {
+    list-style: none; padding: 0;
+}
+.user-list-item {
+    display: flex; align-items: center; padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f2f5;
+}
+.user-list-item:last-child { border-bottom: none; }
+.user-list-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; margin-right: 1rem; }
+.user-list-info a { text-decoration: none; color: #2c3e50; font-weight: 600; }
+.user-list-info p { color: #7f8c8d; font-size: 0.9rem; margin: 0; }

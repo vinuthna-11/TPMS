@@ -1,0 +1,171 @@
+/* Base Styles - Matches Home Page */
+
+.tpms-login {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section - Exact Match to Home Page */
+.login-hero-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem 8rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* Content Container */
+.login-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Form Wrapper - Matches Home Card Style */
+.login-form-wrapper {
+    background: white;
+    border-radius: 10px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-header h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+.login-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    background: white;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 0.7rem;
+    accent-color: #e74c3c;
+}
+
+.remember-me label {
+    color: #7f8c8d;
+}
+
+.forgot-password {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+/* Login Button - Matches Home CTA Buttons */
+.login-button {
+    width: 100%;
+    padding: 1.1rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.login-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Signup Redirect */
+.signup-redirect {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.signup-link {
+    color: #e74c3c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .login-hero-section {
+        padding: 4rem 1.5rem 6rem;
+    }
+    
+    .login-form-wrapper {
+        padding: 2rem 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .login-header h2 {
+        font-size: 2rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

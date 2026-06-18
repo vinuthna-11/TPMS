@@ -1,0 +1,359 @@
+/* =========================
+   Register Page Base
+========================= */
+.register-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.register-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem 8rem;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: -3rem;
+}
+
+.register-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.register-hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   Form Container
+========================= */
+.register-form-container {
+    max-width: 500px;
+    margin: -3rem auto 3rem;
+    padding: 0 1.5rem;
+}
+
+.register-form {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   Progress Steps
+========================= */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.progress-steps:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #ecf0f1;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step span {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ecf0f1;
+    color: #7f8c8d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border: 3px solid #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+.step.active span {
+    background: white;
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.step.completed span {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.step-label {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.step.active .step-label,
+.step.completed .step-label {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* =========================
+   Step Content
+========================= */
+.step-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.step-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-subtitle {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+/* =========================
+   Input Fields
+========================= */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.form-control:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    outline: none;
+}
+
+.form-control.error {
+    border-color: #e74c3c;
+    background-color: #fef2f2;
+}
+
+/* =========================
+   OTP Styles
+========================= */
+.otp-input {
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    background: white;
+}
+
+.otp-timer {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.timer-text {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.resend-link {
+    color: #e74c3c;
+    cursor: pointer;
+    font-weight: 600;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.resend-link:hover {
+    text-decoration: underline;
+    color: #c0392b;
+}
+
+/* =========================
+   Buttons
+========================= */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    min-width: 140px;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.btn-primary:disabled {
+    background-color: #e67e6f;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+}
+
+.btn-outline:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   Error & Footer
+========================= */
+.error-message,
+.error-text {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: #e74c3c;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    .register-hero {
+        padding: 4rem 1.5rem 6rem;
+    }
+    
+    .register-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .register-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .register-form {
+        padding: 2rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+.success-screen {
+  text-align: center;
+  padding: 50px;
+}
+
+.success-screen .checkmark {
+  font-size: 60px;
+  color: green;
+  margin-bottom: 20px;
+}
+

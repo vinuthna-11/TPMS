@@ -1,0 +1,470 @@
+/* dashboard.css */
+.tpms-dashboard {
+  font-family: 'Poppins', sans-serif !important; /* Already in profile.css, added just in case */
+  background-color: #f8f9fa !important; /* Already in profile.css, keep consistent */
+  min-height: 100vh !important; /* Already in profile.css */
+  color: #333 !important;
+}
+
+/* Demo Navbar */
+.demo-navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1rem 2rem !important;
+  background: #2c3e50 !important;
+  color: white !important;
+}
+
+.nav-brand {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+.demo-login-btn {
+  background: #e74c3c !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+}
+
+/* Header Styles */
+.dashboard-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%) !important;
+  color: white !important;
+  padding: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.header-content {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+/* ===== Profile Header ===== */
+.profile-header {
+  gap: 1.5rem !important; /* Only adding properties not handled in profile.css */
+}
+
+.profile-avatar {
+  width: 110px !important;
+  height: 110px !important;
+  object-fit: cover !important;
+  background: #fff !important;
+  border-radius: 50%;
+padding: 2px;
+}
+
+.profile-info h1 {
+  margin: 0 !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+}
+
+.profile-info .role-text {
+  margin: 0.2rem 0 0 0 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: #f1f1f1 !important;
+  opacity: 0.85 !important;
+}
+
+.user-stats {
+  display: flex !important;
+  gap: 2rem !important;
+}
+
+.stat-item {
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.stat-item:hover {
+  transform: translateY(-3px) !important;
+  color: #e74c3c !important;
+}
+
+.stat-number {
+  display: block !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+}
+
+.stat-label {
+  font-size: 0.9rem !important;
+  opacity: 0.8 !important;
+}
+
+/* Remove bottom line for profile section */
+.profile-header-wrapper {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Dashboard Layout */
+.dashboard-content {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  display: grid !important;
+  grid-template-columns: 2fr 1fr !important;
+  gap: 2rem !important;
+}
+
+/* Card Styles */
+.dashboard-card {
+  background: white !important;
+  border-radius: 10px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+.card-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 1rem !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+.card-header h3 {
+  font-size: 1.2rem !important;
+  color: #2c3e50 !important;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100% !important;
+  height: 8px !important;
+  background: #eee !important;
+  border-radius: 4px !important;
+  margin: 0.5rem 0 !important;
+}
+
+.progress-fill {
+  height: 100% !important;
+  background: #e74c3c !important;
+  border-radius: 4px !important;
+  transition: width 0.3s ease !important;
+}
+
+/* Profile Tasks */
+.profile-tasks {
+  list-style: none !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.profile-tasks li {
+  padding: 0.5rem 0 !important;
+  position: relative !important;
+  padding-left: 1.5rem !important;
+}
+
+.profile-tasks li:before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 16px !important;
+  height: 16px !important;
+  border: 2px solid #ddd !important;
+  border-radius: 50% !important;
+}
+
+.profile-tasks li.completed:before {
+  background: #e74c3c !important;
+  border-color: #e74c3c !important;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+  gap: 1.5rem !important;
+}
+
+.portfolio-item {
+  border: 1px solid #eee !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  transition: transform 0.3s ease !important;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px) !important;
+}
+
+.portfolio-thumbnail {
+  height: 150px !important;
+  background: #f0f0f0 !important;
+  position: relative !important;
+}
+
+.item-type {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background: #2c3e50 !important;
+  color: white !important;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 4px !important;
+  font-size: 0.8rem !important;
+}
+
+.portfolio-info {
+  padding: 1rem !important;
+}
+
+.portfolio-info h4 {
+  margin: 0 0 0.5rem 0 !important;
+  font-size: 1rem !important;
+}
+
+.item-stats {
+  font-size: 0.8rem !important;
+  color: #666 !important;
+}
+
+/* Opportunities */
+.opportunities-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.opportunity-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 1rem !important;
+  border: 1px solid #eee !important;
+  border-radius: 8px !important;
+}
+
+.opp-company {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+.company-logo {
+  width: 40px !important;
+  height: 40px !important;
+  background: #f0f0f0 !important;
+  border-radius: 6px !important;
+}
+
+.company-info h4 {
+  margin: 0 0 0.2rem 0 !important;
+  font-size: 1rem !important;
+}
+
+.company-info p {
+  margin: 0 !important;
+  font-size: 0.8rem !important;
+  color: #666 !important;
+}
+
+.opp-actions {
+  display: flex !important;
+  gap: 0.5rem !important;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2rem !important;
+}
+
+.stat-widget {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.stat-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  padding: 0.5rem 0 !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+.stat-value {
+  font-weight: 600 !important;
+  color: #2c3e50 !important;
+}
+
+.activity-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+}
+
+.activity-item {
+  display: flex !important;
+  gap: 0.8rem !important;
+  padding: 0.5rem 0 !important;
+}
+
+.activity-icon {
+  font-size: 1.2rem !important;
+}
+
+.activity-content p {
+  margin: 0 0 0.2rem 0 !important;
+  font-size: 0.9rem !important;
+}
+
+.activity-time {
+  font-size: 0.8rem !important;
+  color: #666 !important;
+}
+
+/* Button Styles */
+.primary-button {
+  background-color: #e74c3c !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.primary-button:hover {
+  background-color: #c0392b !important;
+  transform: translateY(-2px) !important;
+}
+
+.secondary-button {
+  background-color: transparent !important;
+  color: #2c3e50 !important;
+  border: 1px solid #ddd !important;
+  padding: 0.7rem 1.5rem !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.secondary-button:hover {
+  border-color: #2c3e50 !important;
+}
+
+.text-button {
+  background: none !important;
+  border: none !important;
+  color: #e74c3c !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
+
+
+/* Modal User List Fix */
+
+.modal-user {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  padding: 0.8rem 1rem !important;
+  border-bottom: 1px solid #eee !important;
+}
+
+.modal-avatar {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+.modal-user-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.modal-user-info .username {
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  color: #2c3e50 !important;
+}
+
+.modal-user-info .fullname {
+  font-size: 0.85rem !important;
+  color: #666 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .dashboard-content {
+    grid-template-columns: 1fr !important;
+  }
+
+  .header-content {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+
+  .user-stats {
+    justify-content: center !important;
+  }
+
+  .profile-header {
+    flex-direction: column !important;
+  }
+
+  .profile-avatar {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .opportunity-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .opp-actions {
+    align-self: flex-end !important;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+
+.profile-bio {
+    text-align: left;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.profile-bio h3 {
+    color: #6e90b1;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-bio p {
+    color: #b1a4a4;
+    line-height: 1.7;
+}
