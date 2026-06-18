@@ -1,70 +1,287 @@
-# Getting Started with Create React App
+# TPMS – Talent Portfolio Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application developed to help users create, manage, and showcase their professional portfolios in a centralized platform. TPMS enables users to maintain personal information, academic records, technical skills, projects, certifications, achievements, and career-related details while providing secure authentication and profile management features.
 
-## Available Scripts
+The system is built using React.js for the frontend and Django for the backend, providing a modern and scalable architecture for portfolio management.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Talent Portfolio Management System (TPMS) allows users to build a digital portfolio that highlights their skills, projects, certifications, and achievements. The platform provides secure authentication, profile management, media uploads, and email-based OTP verification.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Authentication
+- User Registration
+- Secure Login and Logout
+- OTP-Based Email Verification
+- Session Management
+- Password Recovery Support
 
-### `npm run build`
+### Portfolio Management
+- Personal Profile Creation
+- Profile Picture Upload
+- Academic Information Management
+- Skills Management
+- Project Portfolio Management
+- Certifications Tracking
+- Achievements Management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Dashboard
+- Personalized Dashboard
+- Portfolio Overview
+- Profile Completion Tracking
+- Quick Access to Portfolio Sections
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Media Management
+- Profile Picture Upload
+- Media File Storage
+- Portfolio Asset Management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Security Features
+- Email OTP Verification
+- Secure Authentication
+- Protected User Sessions
+- REST API Security
 
-### `npm run eject`
+### Communication
+- Automated OTP Email Delivery
+- Email Templates
+- Verification Notifications
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technology Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Frontend
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend
+- Django
+- Django REST Framework
 
-## Learn More
+### Database
+- SQLite
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Additional Technologies
+- REST APIs
+- SMTP Email Services
+- OTP Verification System
+- Git
+- GitHub
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+TPMS/
+│
+├── backend/
+│   ├── api/
+│   ├── media/
+│   ├── templates/
+│   ├── tpms/
+│   ├── manage.py
+│   ├── package.json
+│   └── test.http
+│
+├── tpms/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── package-lock.json
+│
+├── .gitignore
+├── README.md
+└── src.zip
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Installation and Setup
 
-### Making a Progressive Web App
+### Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+git clone https://github.com/vinuthna-11/TPMS.git
+cd TPMS
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Backend Setup
 
-### Deployment
+Navigate to the backend directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+cd backend
+```
 
-### `npm run build` fails to minify
+### Create Virtual Environment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+python -m venv venv
+```
+
+### Activate Virtual Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### macOS/Linux
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Apply Migrations
+
+```bash
+python manage.py migrate
+```
+
+### Run Backend Server
+
+```bash
+python manage.py runserver
+```
+
+Backend URL:
+
+```text
+http://127.0.0.1:8000/
+```
+
+---
+
+## Frontend Setup
+
+Open a new terminal and navigate to the frontend directory:
+
+```bash
+cd tpms
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Frontend
+
+```bash
+npm start
+```
+
+Frontend URL:
+
+```text
+http://localhost:3000/
+```
+
+---
+
+## Email Configuration
+
+To enable OTP email verification, configure email settings in:
+
+```text
+backend/tpms/settings.py
+```
+
+Example:
+
+```python
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "your-email@gmail.com"
+EMAIL_HOST_PASSWORD = "your-app-password"
+```
+
+---
+
+## Application Workflow
+
+1. User Registration
+2. OTP Verification
+3. User Login
+4. Profile Creation
+5. Portfolio Management
+6. Skills and Project Updates
+7. Certification Management
+8. Dashboard Monitoring
+
+---
+
+## Screenshots
+
+Add screenshots of the application here.
+
+### Login Page
+
+![Login Page](screenshots/login.png)
+
+### Registration Page
+
+![Registration Page](screenshots/register.png)
+
+### OTP Verification
+
+![OTP Verification](screenshots/otp.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Portfolio Page
+
+![Portfolio](screenshots/portfolio.png)
+
+---
+
+## Future Enhancements
+
+- Resume Builder
+- Resume Download as PDF
+- Portfolio Sharing Links
+- AI-Based Portfolio Analysis
+- Recruiter Dashboard
+- Analytics and Insights
+- Portfolio Templates
+- Social Media Integration
+- Cloud Storage Support
+
+---
+
+## Learning Outcomes
+
+- Developed a full-stack web application using React.js and Django.
+- Implemented secure authentication and authorization mechanisms.
+- Integrated OTP-based email verification.
+- Built RESTful APIs for frontend-backend communication.
+- Managed media uploads and user-generated content.
+- Applied version control using Git and GitHub.
+
+---
+## License
+
+This project is developed for educational and learning purposes.
